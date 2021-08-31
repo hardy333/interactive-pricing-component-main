@@ -1,0 +1,35 @@
+.main{
+    min-height: 100vh;
+    padding: 0 clamp(0rem, 4rem, 5vw) 2rem;
+    background: url("../images/bg-pattern.svg")  no-repeat;
+    background-size: 200% 50%;
+    
+ 
+
+
+    &__header{
+        padding: 5rem 0 4rem;
+
+        background: url("../images/pattern-circles.svg")center/ auto no-repeat;
+
+        p{
+            max-width: 23rem;
+            margin:  1rem auto 0;
+        }
+
+        @media screen and(min-width: 56.25em){
+            padding: 8rem 0 7rem;
+            h1{
+                font-size: 3rem;
+            }
+            
+            p{
+                max-width: 40rem;
+                margin:  1rem auto 0;
+            }
+
+        }
+      
+    }
+
+}

@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --Soft-Cyan: hsl(174, 77%, 80%);
+  --Strong-Cyan: hsl(174, 86%, 45%);
+  --Light-Grayish-Red: hsl(14, 92%, 95%);
+  --Light-Red: hsl(15, 100%, 70%);
+  --Pale-Blue: hsl(226, 100%, 87%);
+  --White: hsl(0%, 0%, 100%);
+  --Very-Pale-Blue: hsl(230, 100%, 99%);
+  --Light-Grayish-Blue: hsl(224, 65%, 95%);
+  --Light-Grayish-Blue: hsl(223, 50%, 87%);
+  --Grayish-Blue: hsl(225, 20%, 60%);
+  --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--Very-Pale-Blue);
+  color: var(--Grayish-Blue);
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0.05rem;
+}
+
+h1 {
+  font-weight: 800;
+  color: var(--Dark-Desaturated-Blue);
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.btn {
+  width: 20rem;
+  max-width: 100%;
+  padding: 1.2rem 1rem;
+  margin: auto;
+  background-color: var(--Dark-Desaturated-Blue);
+  border-radius: 30rem;
+  color: var(--Pale-Blue);
+  cursor: pointer;
+  border: none;
+  font-size: inherit;
+  letter-spacing: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px -4px rgba(0, 0, 0, 0.1);
+  max-width: 50rem;
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 56.25em) {
+  .card {
+    max-width: 70rem;
+    width: 100%;
+    font-size: 1.4rem;
+  }
+}
+
+.card__top {
+  padding: 3.5rem clamp(0px, 3rem, 5vw);
+}
+
+.card__header:nth-child(1) {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 56.25em) {
+  .card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+}
+
+.card__price-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__price-wrapper--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 56.25em) {
+  .card__price-wrapper--desktop {
+    display: flex;
+  }
+  .card__price-wrapper--mobile {
+    display: none;
+  }
+}
+
+.card__price {
+  margin-right: 0.5rem;
+  width: 11rem;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--Dark-Desaturated-Blue);
+}
+
+.card__slash {
+  margin-right: 0.2rem;
+}
+
+.card__range {
+  -webkit-appearance: none;
+  background-color: var(--Light-Grayish-Blue);
+  border-radius: 2rem;
+  height: 0.6rem;
+  margin: 4rem 0 3rem;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  --size: 3.5rem;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  border: none;
+  background: url("../images/icon-slider.svg") center no-repeat;
+  background-color: #10d5c2;
+  box-shadow: 0 0.9rem 1.8rem 0 rgba(16, 213, 194, 0.692);
+  cursor: pointer;
+}
+
+.card__range::-webkit-slider-thumb:hover {
+  filter: brightness(110%);
+}
+
+.card__range::-webkit-slider-thumb:active {
+  filter: brightness(90%);
+}
+
+.card__range::-moz-range-thumb {
+  --size: 3.5rem;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  border: none;
+  background: url("../images/icon-slider.svg") center no-repeat;
+  background-color: #0eddc8;
+  box-shadow: 0 1.2rem 1.8rem 0 rgba(3, 252, 227, 0.692);
+  cursor: pointer;
+}
+
+.card__range::-moz-range-thumb:hover {
+  filter: brightness(110%);
+}
+
+.card__range::-moz-range-thumb:active {
+  filter: brightness(90%);
+}
+
+.card__toggler-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 56.25em) {
+  .card__toggler-wrapper {
+    font-size: 1.3rem;
+    margin-top: 6rem;
+  }
+}
+
+.card__billing-title {
+  position: relative;
+}
+
+.card__badge {
+  padding: 0rem 1rem;
+  background-color: #feece7;
+  color: #ff8c66;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  position: absolute;
+  top: 60%;
+  right: -0.5rem;
+  transform: translate(100%, -50%);
+}
+
+.card__badge__title {
+  display: none;
+}
+
+@media screen and (min-width: 56.25em) {
+  .card__badge {
+    width: 12rem;
+  }
+  .card__badge__title {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 25em) {
+  .card__badge {
+    top: 100%;
+    right: 0rem;
+    transform: translate(-10%, 5%);
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+}
+
+.card__toggler {
+  --height: 2.1rem;
+  background-color: #cdd7ee;
+  border-radius: 2rem;
+  width: 4rem;
+  height: var(--height);
+  border: none;
+  cursor: pointer;
+  margin: 0 1rem;
+  position: relative;
+  transition: background 0.3s ease-in;
+}
+
+.card__toggler:hover {
+  filter: brightness(103%);
+}
+
+.card__toggler::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  border-radius: 100%;
+  --size: calc(var(--height) - 7px);
+  width: var(--size);
+  height: var(--size);
+  top: 3.5px;
+  left: 3.5px;
+  transform: translate(0, 0);
+  transition: all 0.3s ease;
+}
+
+.card__toggler.on {
+  background-color: #0eddc8;
+}
+
+.card__toggler.on::before {
+  left: 100%;
+  transform: translate(calc(-100% - 3.5px), 0);
+}
+
+.card__bottom {
+  padding: 0rem clamp(0px, 2rem, 5vw) 4rem;
+  border-top: 1px solid rgba(201, 204, 212, 0.582);
+}
+
+@media screen and (min-width: 56.25em) {
+  .card__bottom {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem 0rem;
+  }
+  .card__bottom .btn {
+    margin: 0;
+    margin-top: 1rem;
+  }
+}
+
+.card__list {
+  margin: 3rem 0;
+  list-style: none;
+}
+
+.card__list-item {
+  margin: 0.8rem 0;
+}
+
+.card__list-item img {
+  margin-right: 1.5rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 0 clamp(0rem, 4rem, 5vw) 2rem;
+  background: url("../images/bg-pattern.svg") no-repeat;
+  background-size: 200% 50%;
+}
+
+.main__header {
+  padding: 5rem 0 4rem;
+  background: url("../images/pattern-circles.svg") center/auto no-repeat;
+}
+
+.main__header p {
+  max-width: 23rem;
+  margin: 1rem auto 0;
+}
+
+@media screen and (min-width: 56.25em) {
+  .main__header {
+    padding: 8rem 0 7rem;
+  }
+  .main__header h1 {
+    font-size: 3rem;
+  }
+  .main__header p {
+    max-width: 40rem;
+    margin: 1rem auto 0;
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="main" id="main">
+    <div class="main__container">
+      <header class="main__header">
+        <h1 class="">Simple, traffic-based pricing</h1>
+        <p>
+          Sign-up for our 30-day trial. No credit card required. 
+        </p>
+      </header>
+
+      <article class="card">
+        <div class="card__top">
+          <div class="card__header">
+            <p><span class="card__views" style="display:inline-flex; justify-content: center; width: 2.6rem; text-align:center;">100</span>k <span style="padding: 0 0.5rem;"> </span> PAGEVIEWS</p>
+            <p class="card__price-wrapper card__price-wrapper--desktop"><span class="card__price">$16.00</span><span class="card__slash">/</span>month</p>
+          </div>
+
+          <input class="card__range" type="range" min="0" max="100" step="1">
+
+          <p class="card__price-wrapper card__price-wrapper--mobile"><span class="card__price ">$16.00</span> <span class="card__slash">/</span>month</p>
+
+
+          <div class="card__toggler-wrapper">
+            <span>Monthly Billing</span>
+            <button class="card__toggler"></button>
+            <span class="card__billing-title">Yearly Billing
+              <span class="card__badge">-25% <span class="card__badge__title">discount</span></span>
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="card__bottom">
+          <ul class="card__list">
+            <li class="card__list-item">
+              <img src="./images/icon-check.svg" alt="">
+              Unlimited websites
+            </li>
+            <li class="card__list-item">
+              <img src="./images/icon-check.svg" alt="">
+              100% data ownership
+            </li>
+            <li class="card__list-item">
+              <img src="./images/icon-check.svg" alt="">
+              Email reports
+            </li>
+          </ul>
+
+          <button class="btn">Start my trial</button>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  
+
+  
+
+  
+   
+
+  
+  
+  
+
+  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
